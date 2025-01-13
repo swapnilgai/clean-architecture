@@ -25,6 +25,9 @@ object Dependencies {
             koin,
             "co.touchlab:kermit:${Version.kermit}",
         )
+        val kotlinCoroutines = listOf(
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.coroutines}"
+        )
 
         val androidDefault = listOf(
             "androidx.compose.ui:ui:${Version.compose}",

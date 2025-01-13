@@ -16,6 +16,9 @@ fun Project.addAndroidDefaultLib(){
         Dependencies.Shared.androidDefault.forEach { dependencies ->
             implementation(dependencies)
         }
+        Dependencies.Shared.kotlinCoroutines.forEach { dependencies ->
+            implementation(dependencies)
+        }
     }
 
 }
