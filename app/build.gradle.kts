@@ -1,3 +1,5 @@
+import com.kotlin.app_config_plugin.addAndroidDefaultLib
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -36,7 +38,7 @@ android {
 }
 
 dependencies {
-
+    addAndroidDefaultLib()
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "clean-architecture"
 include(":app")
+includeBuild("app-config-plugin")
