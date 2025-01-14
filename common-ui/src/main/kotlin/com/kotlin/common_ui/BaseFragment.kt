@@ -12,7 +12,6 @@ abstract class BaseFragment<T> : Fragment() {
     abstract fun render(data: T)
 
     private fun observe(){
-        val currentScope = MainScope().also { currentScope = it }
         viewLifecycleOwner.lifecycleScope.launch {
            viewMode.uiFlow.viewState.collect { state ->
                when (state) {
@@ -34,6 +33,7 @@ abstract class BaseFragment<T> : Fragment() {
     }
 
     private fun handleContent(data: T){
+        setLoading(false)
         render(data)
     }
 
